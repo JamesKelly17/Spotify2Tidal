@@ -22,16 +22,14 @@ A Python tool to transfer your liked songs from Spotify to Tidal.
 
 ### 1. Clone the Repository
 
-```bash
-git clone <your-repo-url>
-cd spotify-tidal-transfer
-```
+git clone https://github.com/JamesKelly17/SpotifyToTidal.git
+cd spotifyToTidal
 
 ### 2. Install Dependencies
 
-```bash
+
 pip install -r requirements.txt
-```
+
 
 ### 3. Set Up Spotify API Credentials
 
@@ -41,7 +39,7 @@ pip install -r requirements.txt
 4. Fill in the app name and description
 5. Once created, you'll see your **Client ID** and **Client Secret**
 6. Click "Edit Settings"
-7. Add `http://localhost:8888/callback` to the Redirect URIs
+7. Add `http://127.0.0.1:8888/callback` to the Redirect URIs
 8. Click "Save"
 
 ### 4. Configure Environment Variables
@@ -55,7 +53,7 @@ pip install -r requirements.txt
    ```
    SPOTIFY_CLIENT_ID=your_spotify_client_id_here
    SPOTIFY_CLIENT_SECRET=your_spotify_client_secret_here
-   SPOTIFY_REDIRECT_URI=http://localhost:8888/callback
+   SPOTIFY_REDIRECT_URI=http://127.0.0.1:8888/callback
    ```
 
 ## Usage
@@ -64,25 +62,22 @@ pip install -r requirements.txt
 
 Before transferring, test that both Spotify and Tidal connections work:
 
-```bash
 python main.py --test
-```
 
 ### Preview Your Liked Songs
 
 Preview the first 10 songs that will be transferred:
 
-```bash
 python main.py --preview 10
-```
+
 
 ### Transfer All Songs
 
 Transfer all your liked songs from Spotify to Tidal:
 
-```bash
+
 python main.py
-```
+
 
 You will be prompted to confirm before the transfer starts.
 
@@ -90,9 +85,8 @@ You will be prompted to confirm before the transfer starts.
 
 For testing, you can limit the transfer to the first N songs:
 
-```bash
 python main.py --limit 50
-```
+
 
 ## How It Works
 
@@ -133,7 +127,7 @@ Make sure your `.env` file exists and contains valid `SPOTIFY_CLIENT_ID` and `SP
 
 ### Spotify Authorization Failed
 
-1. Check that `http://localhost:8888/callback` is added to your Spotify app's Redirect URIs
+1. Check that `http://127.0.0.1:8888/callback` is added to your Spotify app's Redirect URIs
 2. Make sure no other application is using port 8888
 
 ### Tidal Login Issues
