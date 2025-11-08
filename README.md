@@ -21,9 +21,10 @@ A Python tool to transfer your liked songs from Spotify to Tidal.
 ## Setup
 
 ### 1. Clone the Repository
-
+```bash
 git clone https://github.com/JamesKelly17/SpotifyToTidal.git
 cd spotifyToTidal
+```
 
 ### 2. Install Dependencies
 
@@ -50,13 +51,16 @@ pip install -r requirements.txt
 
 
 2. Edit the `.env` file and add your credentials:
-
+   ```
    nano .env
+   ```
 
- 
+   Then update with account info
+   ```
    SPOTIFY_CLIENT_ID=your_spotify_client_id_here
    SPOTIFY_CLIENT_SECRET=your_spotify_client_secret_here
    SPOTIFY_REDIRECT_URI=http://127.0.0.1:8888/callback
+   ```
 
 
 ## Usage
@@ -64,32 +68,32 @@ pip install -r requirements.txt
 ### Test Connections
 
 Before transferring, test that both Spotify and Tidal connections work:
-
+```
 python main.py --test
-
+```
 ### Preview Your Liked Songs
 
 Preview the first 10 songs that will be transferred:
-
+```
 python main.py --preview 10
-
+```
 
 ### Transfer All Songs
 
 Transfer all your liked songs from Spotify to Tidal:
 
-
+```
 python main.py
-
+```
 
 You will be prompted to confirm before the transfer starts.
 
 ### Transfer Limited Number of Songs
 
 For testing, you can limit the transfer to the first N songs:
-
+```
 python main.py --limit 50
-
+```
 
 ## How It Works
 
