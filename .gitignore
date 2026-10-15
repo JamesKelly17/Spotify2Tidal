@@ -35,3 +35,14 @@ tidal_session.json
 .idea/
 *.swp
 *.swo
+
+# Virtual environments
+venv*/
+.venv/
+env/
+# macOS
+.DS_Store
+# Env variants (keep the example)
+.env.*
+!.env.example
+*.log
